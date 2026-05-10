@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shared Diary ❤️</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="login-screen" class="container">
+        <h1>تسجيل الدخول</h1>
+        <p></p>
+        <input type="text" id="username" placeholder="اسم المستخدم">
+        <input type="password" id="password" placeholder="كلمة المرور">
+        <button class="login-btn" onclick="login()">❤️</button>
+    </div>
+
+    <div id="main-content" class="content-wrapper hidden">
+        <div class="header">
+            <h1 id="welcome-msg"></h1>
+            <button class="logout-mini-btn" onclick="logout()">خروج</button>
+        </div>
+
+        <div id="years-view" class="fade-in">
+            <h2 class="section-title">✨</h2>
+            <div id="years-grid" class="months-grid">
+                <div class="month-card" onclick="showMonths()">2026</div>
+            </div>
+        </div>
+
+        <div id="months-view" class="hidden fade-in">
+            <button class="back-btn" onclick="showYears()">⬅ العودة للسنوات</button>
+            <div id="months-grid" class="months-grid"></div>
+        </div>
+
+        <div id="days-view" class="hidden">
+            <button class="back-btn" onclick="showMonths()">⬅ العودة للأشهر</button>
+            <div id="day-selector-container"></div>
+            
+            <div id="editor-section" class="editor-container hidden fade-in">
+                <textarea id="note-input" spellcheck="false"></textarea>
+                <button id="save-btn" class="save-btn" onclick="saveNote()">حفظ الكلام❤️</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="custom-alert" class="alert-overlay hidden">
+        <div class="alert-box fade-in">
+            <p id="alert-message"></p>
+            <button onclick="closeAlert()">افففف</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

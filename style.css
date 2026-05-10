@@ -1,0 +1,80 @@
+body {
+    background-color: #fff8f8;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0; display: flex; justify-content: center; align-items: center; min-height: 100vh;
+}
+
+.container {
+    background: white; padding: 40px; border-radius: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05); width: 100%; max-width: 380px; text-align: center;
+}
+
+.content-wrapper { width: 95%; max-width: 1000px; text-align: center; }
+
+.header { margin-top: -60px; margin-bottom: 20px; }
+.logout-mini-btn { background: #666; color: white; border: none; padding: 5px 15px; border-radius: 10px; cursor: pointer; font-size: 12px; }
+
+.section-title { color: #ff4d6d; margin-bottom: 30px; font-size: 28px; }
+
+.months-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 20px; padding: 10px; justify-content: center;
+}
+
+.month-card {
+    background: white; padding: 35px 15px; border-radius: 20px;
+    border: 2px solid #fff0f2; cursor: pointer; transition: 0.3s;
+    font-size: 20px; font-weight: bold; color: #ff4d6d;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+}
+
+.month-card.locked { background: #f9f9f9; color: #ccc; cursor: not-allowed; border-color: #eee; }
+.month-card.locked::after { content: ' 🔒'; font-size: 14px; }
+.month-card:not(.locked):hover { transform: translateY(-5px); border-color: #ff4d6d; }
+
+.back-btn {
+    background: #ff4d6d; color: white; border: none; padding: 10px 25px;
+    border-radius: 50px; cursor: pointer; margin-bottom: 25px;
+}
+
+.day-tag {
+    padding: 15px 45px; background: white; border: 2px solid #ff4d6d;
+    border-radius: 20px; display: inline-block; font-weight: bold;
+    color: #ff4d6d; font-size: 24px; margin-bottom: 20px; position: relative;
+    cursor: pointer; transition: 0.3s;
+}
+.day-tag::before { content: '🌸'; position: absolute; right: -10px; top: -10px; font-size: 25px; }
+
+textarea {
+    width: 100%; height: 450px; border: none; border-radius: 40px;
+    padding: 50px; font-size: 26px; text-align: center; line-height: 1.8;
+    box-shadow: 0 10px 50px rgba(255, 77, 109, 0.1); outline: none;
+    background: white; box-sizing: border-box; resize: none;
+}
+
+.save-btn {
+    margin-top: 20px; background: #ff4d6d; color: white; border: none;
+    padding: 15px 50px; border-radius: 50px; cursor: pointer; font-size: 18px;
+}
+
+input { width: 100%; padding: 12px; margin: 10px 0; border-radius: 12px; border: 1px solid #eee; outline: none; box-sizing: border-box; }
+.login-btn { width: 100%; background: #ff4d6d; color: white; border: none; padding: 12px; border-radius: 50px; cursor: pointer; font-size: 20px; }
+
+/* تنسيق التنبيه الجديد (Custom Alert) */
+.alert-overlay {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.4); display: flex; justify-content: center; align-items: center; z-index: 1000;
+}
+.alert-box {
+    background: white; padding: 30px; border-radius: 25px; text-align: center;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.2); max-width: 300px; width: 80%;
+}
+.alert-box p { font-size: 18px; color: #ff4d6d; font-weight: bold; margin-bottom: 20px; }
+.alert-box button {
+    background: #ff4d6d; color: white; border: none; padding: 10px 30px;
+    border-radius: 50px; cursor: pointer; font-weight: bold;
+}
+
+.hidden { display: none !important; }
+.fade-in { animation: fadeIn 0.8s ease forwards; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
