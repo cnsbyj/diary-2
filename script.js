@@ -4,7 +4,7 @@ const SUPABASE_KEY = 'sb_publishable_sDpI7CKbD68--hYLmwaHEw_n1G6_u5B';
 
 const users = {
     "dd": { password: "112233", name: "دحوم", role: "writer" },
-    "mona": { password: "123", name: "منى", role: "reader" }
+    "mina": { password: "123", name: "منى", role: "reader" }
 };
 
 const months = [
